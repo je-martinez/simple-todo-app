@@ -2,6 +2,9 @@
 ## UI Credits
 
 - Page Layout Responsive by banny from TW Components, [example here](https://www.creative-tim.com/twcomponents/component/page-layout-responsive)
+- Sign In Modal - Tailwind CSS By Creative Tim from TW Components, [example here](https://www.creative-tim.com/twcomponents/component/sign-in-modal-tailwind-css)
+- Tailwind CSS Notification Modal by Coding4Ethiopia from TW Components, [example here](https://www.creative-tim.com/twcomponents/component/notification-modal-with-tailwind-css)
+- Beautiful Blog Card for Tailwind CSS by ale, from TW Components, [example here](https://www.creative-tim.com/twcomponents/component/beautiful-blog-card)
 
 ## React + Vite + TailwindCSS template
 

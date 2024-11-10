@@ -1,6 +1,6 @@
 export const Loading = ({ name }) => {
   if (name) {
-    console.log('Loading', name);
+    console.log("Loading", name);
   }
 
   return (

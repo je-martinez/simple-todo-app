@@ -9,9 +9,6 @@ export const Banner = () => {
         <p className="text-lg inline-block sm:block">
           This is just an example of a Todo App
         </p>
-        <button className="mt-8 px-4 py-2 bg-gray-600 rounded">
-          Browse your Todos
-        </button>
       </div>
     </div>
   );

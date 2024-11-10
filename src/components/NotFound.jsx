@@ -1,5 +1,5 @@
-import { RoutePaths } from "../router/RoutePaths.jsx";
 import { useNavigate } from "react-router-dom";
+import { RoutePaths } from "../router/RoutePaths.jsx";
 
 export const NotFound = () => {
   const navigate = useNavigate();

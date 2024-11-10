@@ -1,7 +1,7 @@
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./ErrorFallback.jsx";
-import { Header } from "./Header.jsx";
 import { Footer } from "./Footer.jsx";
+import { Header } from "./Header.jsx";
 
 export const Layout = ({ children }) => {
   return (

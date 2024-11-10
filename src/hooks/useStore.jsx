@@ -5,14 +5,19 @@ import { v4 as uuidv4 } from "uuid";
 export const useStore = () => {
   const { todos, setTodos } = useContext(AppContext);
 
-  const create = ({ name }) => {
-    setTodos((prev) => [...prev, { id: uuidv4(), name, updated: false }]);
+  const get = (id) => todos.find((todo) => todo.id === id);
+
+  const create = ({ name, description }) => {
+    setTodos((prev) => [
+      ...prev,
+      { id: uuidv4(), name, description, date: new Date() },
+    ]);
   };
 
-  const update = ({ id, name }) => {
+  const update = ({ id, name, description }) => {
     setTodos((prev) =>
       prev.map((todo) =>
-        todo.id === id ? { ...todo, name, updated: true } : todo
+        todo.id === id ? { ...todo, name, description, date: new Date() } : todo
       )
     );
   };
@@ -21,5 +26,5 @@ export const useStore = () => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
-  return { todos, create, update, remove };
+  return { todos, get, create, update, remove };
 };
