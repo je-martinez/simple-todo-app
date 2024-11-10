@@ -8,7 +8,7 @@ export const ManageTodoModal = ({
   isOpen = false,
   onClose = undefined,
 }) => {
-  const { get, update, create } = useStore();
+  const { get, update, create, remove } = useStore();
 
   const {
     register,
@@ -43,6 +43,14 @@ export const ManageTodoModal = ({
   };
 
   const handleSkip = () => {
+    if (onClose) onClose();
+    reset();
+  };
+
+  const handlerRemove = () => {
+    if (id) {
+      remove(id);
+    }
     if (onClose) onClose();
     reset();
   };
@@ -96,6 +104,15 @@ export const ManageTodoModal = ({
               onClick={handleSkip}
             >
               Skip
+            </button>
+          )}
+          {id && (
+            <button
+              type="button"
+              className="p-3 bg-red-600 rounded-full text-white w-full font-semibold"
+              onClick={handlerRemove}
+            >
+              Delete Todo
             </button>
           )}
         </form>
