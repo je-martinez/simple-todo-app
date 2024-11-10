@@ -26,5 +26,11 @@ export const useStore = () => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
-  return { todos, get, create, update, remove };
+  const search = (query) => {
+    return todos.filter((todo) =>
+      todo.name.toLowerCase().includes(query.toLowerCase())
+    );
+  };
+
+  return { todos, get, create, update, remove, search };
 };

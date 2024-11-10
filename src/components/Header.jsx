@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { SearchIcon } from "../icons/SearchIcon";
-import { Banner } from "./Banner";
 import { ManageTodoModal } from "./ManageTodoModal";
 
 export const Header = () => {
@@ -18,23 +16,13 @@ export const Header = () => {
             Simple Todo App
           </h1>
           <div className="flex justify-between flex-grow">
-            <div className="flex ml-6 items-center">
-              <span>
-                <SearchIcon />
-              </span>
-              <input
-                className="outline-none text-sm flex-grow bg-white-50"
-                type="text"
-                placeholder="Search your Todos"
-              />
-            </div>
-            <button className="md:flex space-x-6 hidden" onClick={openModal}>
+            <div className="flex ml-6 items-center"></div>
+            <button className="md:flex space-x-6" onClick={openModal}>
               <span className="text-gray-500 text-md">+ Add a new Todo</span>
             </button>
           </div>
         </div>
       </nav>
-      <Banner />
     </header>
   );
 };

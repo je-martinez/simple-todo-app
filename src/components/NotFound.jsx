@@ -3,12 +3,27 @@ import { RoutePaths } from "../router/RoutePaths.jsx";
 
 export const NotFound = () => {
   const navigate = useNavigate();
+  const goBackHome = () => navigate(RoutePaths.HOME);
   return (
-    <div className="flex flex-col items-center">
-      <h3 className="px-3 py-2 text-base font-medium">Page not found.</h3>
-      <button onClick={() => navigate(RoutePaths.HOME)} type="button">
-        Go Home
-      </button>
+    <div className="h-screen w-screen flex items-center">
+      <div className="container flex flex-col md:flex-row items-center justify-center px-5 text-gray-700">
+        <div className="max-w-md">
+          <div className="text-5xl font-dark font-bold">404</div>
+          <p className="text-2xl md:text-3xl font-light leading-normal">
+            Sorry we couldn&apos;t find this page.{" "}
+          </p>
+          <p className="mb-8">
+            But dont worry, you can find plenty of other things on our homepage.
+          </p>
+          <button
+            onClick={goBackHome}
+            className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-gray-500 active:bg-gray-600 hover:bg-gray-700"
+          >
+            Back to Home
+          </button>
+        </div>
+        <div className="max-w-lg"></div>
+      </div>
     </div>
   );
 };
